@@ -12,12 +12,10 @@ public interface LivroRepository extends JpaRepository<Livro, Long> {
             Integer quantidade
     );
 
-    // 2. Buscar livros por categoria
     List<Livro> findByCategoriaNomeIgnoreCase(
             String nome
     );
 
-    // 5. Encontrar livros de um autor específico
     List<Livro> findByAutoresNomeIgnoreCaseOrderByAnoPublicacaoAsc(
             String nome
     );
