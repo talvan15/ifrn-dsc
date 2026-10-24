@@ -3,9 +3,9 @@ spring:
     name: chamados
 
   datasource:
-    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5433}/${DB_NAME:chamados}
-    username: ${DB_USER:postgres}
-    password: ${DB_PASSWORD:postgres}
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:chamados}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
 
   jpa:
     hibernate:
@@ -14,3 +14,9 @@ spring:
 
   flyway:
     enabled: true
+
+  data:
+    web:
+      pageable:
+        default-page-size: 10
+        max-page-size: 50
